@@ -10,11 +10,15 @@
 
 ## 2. Installer MSYS2
 
+![Installation de MSYS2](images/images2_1.png)
+
 1. Accédez au site officiel :  
    [https://www.msys2.org/](https://www.msys2.org/)  
 2. Téléchargez l'installateur adapté à votre architecture (x86_64 pour la plupart des PC récents).  
 3. MSYS2 doit être installé dans `C:\Info\msys64`. Lancez l’installateur et suivez les instructions.  
 4. Ouvrez le terminal **MSYS2 UCRT64** (icône "MSYS2 UCRT64").
+
+![MSYS2 Installé](images/images2_2.png)
 
 ---
 
@@ -27,10 +31,17 @@ Dans le terminal MSYS2, exécutez les commandes suivantes :
 pacman -Syu
 # Fermez le terminal si demandé, puis relancez-le et continuez :
 pacman -Su
+```
 
+![Mise à jour de MSYS2](images/images3_1.png)
+
+```sh
 # Installer les outils de développement C/C++, CMake et Git
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain mingw-w64-ucrt-x86_64-cmake git
 ```
+
+![Installation chaine de développement UCRT64](images/images3_2.png)
+
 
 ---
 
@@ -48,6 +59,7 @@ Pour que VSCode détecte les outils MSYS2 UCRT64, ajoutez le chemin `C:\Info\msy
 4. Monter ce nouveau chemin en premier dans la liste.  
 5. Validez et redémarrez votre ordinateur pour que les changements soient pris en compte.
 
+![Ajout du chemin MSYS2 dans le PATH](images/images4.png)
 
 > **Remarque importante :**
 > Sous MSYS2 UCRT64, le binaire de make fourni par le paquet `mingw-w64-ucrt-x86_64-make` s'appelle `mingw32-make.exe` (et non `make.exe`).
@@ -100,6 +112,8 @@ Ajoutez un profil pour MSYS2 **en veillant à l’ajouter à la liste déjà exi
 
 > **Remarque :** Ce profil démarre directement l'environnement UCRT64 en passant la variable d'environnement `MSYSTEM=UCRT64`, ce qui correspond au comportement de l'icône "MSYS2 UCRT64" du menu Démarrer. 
 
+![Ajout du profil MSYS2 UCRT64](images/images6.png)
+
 Vous pourrez alors ouvrir un terminal MSYS2 directement dans VSCode.
 
 Pour cela, ouvrez un terminal intégré (`Ctrl+ù` ou menu Terminal > Nouveau terminal), puis cliquez sur la flèche à droite du bouton “+” du terminal et sélectionnez le profil **MSYS2 UCRT64** dans la liste proposée. Si besoin, refermez et rouvrez le terminal pour que le bon profil soit utilisé.
@@ -137,6 +151,7 @@ Ouvrez ensuite le dossier cloné dans VSCode si ce n'est pas déjà fait.
 "projectTemplates.templatesDirectory": "C:/Users/<votre-nom>/src/vscode-project-templates"
 ```  
 
+![Configuration du chemin des modèles de projet](images/images7_2.png)
 
 ### 7.3. Créer un nouveau projet à partir du modèle 'MSys2 CMake C Project'
 
@@ -157,11 +172,13 @@ Ouvrez ensuite le dossier cloné dans VSCode si ce n'est pas déjà fait.
 2. Choisissez le kit correspondant à **MSYS2 UCRT64** (le nom peut varier selon l'installation).
 3. Cliquez sur l'icône "Générer" (Roue dentée) dans la barre de statut pour compiler le projet.
 
+
 ### 7.5. Exécuter le programme avec CMake Tools
 
 1. Cliquez sur l'icône "Play" (triangle) dans la barre de statut de VSCode pour exécuter le binaire compilé.
 2. La sortie du programme s'affichera dans le terminal intégré ou dans le panneau de sortie CMake Tools.
 
+![Exécution du programme](images/images7_5.png)
 
 ### 7.6. Déboguer le projet avec la configuration fournie
 
@@ -175,6 +192,7 @@ Pour lancer le débogage dans VSCode :
 4. Cliquez sur le bouton vert "Démarrer le débogage" (ou appuyez sur `F5`).
 5. Le débogueur s’attachera automatiquement à l’exécutable généré par CMake, en utilisant gdb fourni par MSYS2 UCRT64.
 
+![Mise au point avec GDB](images/images7_6.png)
 
 Vous pouvez placer des points d’arrêt, inspecter les variables, et utiliser toutes les fonctionnalités de débogage de VSCode.
 
@@ -193,6 +211,8 @@ Pour aller plus loin, consultez le guide officiel sur le débogage C/C++ dans VS
 1. Rendez-vous sur [https://github.com/](https://github.com/) et inscrivez-vous avec votre adresse mail étudiante.  
 2. Cliquez sur l’icône de compte en bas à gauche de VSCode, puis sur "Se connecter à GitHub pour profiter de l'IA".  
 3. Suivez les instructions pour autoriser VSCode à accéder à votre compte GitHub.
+
+![Autoriser VSCode à accéder à GitHub](images/images8_1.png)
 
 ### 8.2. Créer un dépôt GitHub pour vos TP
 
@@ -217,6 +237,8 @@ Vous pouvez demander à GitHub Copilot de modifier le fichier `main.c` pour affi
 **Exemple de prompt à saisir dans Copilot Chat ou dans la palette de commandes Copilot :**
 
 > Modifie main.c pour qu'il affiche 10 fois "Hello World!" à l'exécution.
+
+![Utilisation de Copilot](images/images8_4.png)
 
 Copilot proposera alors le code adapté, généralement une boucle `for` avec un `printf`. Validez la suggestion ou copiez-la dans votre fichier.
 
