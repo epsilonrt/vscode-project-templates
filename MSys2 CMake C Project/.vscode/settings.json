@@ -1,0 +1,7 @@
+{
+  "cmake.generator": "Unix Makefiles",
+  "environment": [
+    { "name": "PATH", "value": "C:/Info/msys64/ucrt64/bin;C:/Info/msys64/usr/bin;${env:PATH}" },
+    { "name": "MSYSTEM", "value": "UCRT64" }
+  ]
+}
