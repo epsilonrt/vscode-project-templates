@@ -1,8 +1,6 @@
 #include <stdio.h>
 
 int main() {
-  for (int i = 0; i < 5; i++) {
-    printf ("Hello World from #{PROJECT_NAME}! %d\n", i);
-  }
+  printf ("Hello World!\n");
   return 0;
 }
