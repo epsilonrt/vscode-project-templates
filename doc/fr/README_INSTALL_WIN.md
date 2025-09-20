@@ -4,7 +4,7 @@
 
 1. Rendez-vous sur la page officielle de téléchargement :  
    [https://code.visualstudio.com/](https://code.visualstudio.com/)
-2. Téléchargez la version Windows et installez-la en suivant les instructions.
+2. Téléchargez la version Windows et installez-la en suivant les instructions. ** Bien choisir "User Installer" pour une installation sans droits administrateur. **
 
 ---
 
