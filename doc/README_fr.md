@@ -1,5 +1,20 @@
 # Tutoriel : Développer en C/C++ sous Windows avec VSCode, MSYS2, CMake et Git
 
+Lorsque l’on débute en programmation C/C++, le choix du compilateur et de l’environnement de développement est l’une des premières décisions à prendre.  
+Bien qu’il ne s’agisse pas forcément de l’option la plus simple, VS Code (Visual Studio Code) est un bon choix car il est open-source et disponible sur toutes les plateformes. De plus, sa large gamme d’extensions lui permet de s’adapter à tous les langages et à toutes les cibles de développement.
+
+Cependant, cette flexibilité peut représenter un inconvénient pour les débutants en C/C++, car aucun compilateur ni système de construction n’est fourni par défaut.
+
+Pour le compilateur, le choix le plus logique est le compilateur GNU C (gcc). Toutefois, sous Windows, le compilateur Microsoft Visual Studio fait figure de référence. Le choix dépendra donc de vos objectifs spécifiques.
+
+Enfin, il faut choisir un système de construction (“build system”). Un système de construction gère la configuration, la compilation et l’édition de liens pour générer un exécutable ou une bibliothèque à partir d’un ensemble de fichiers sources. Il existe de nombreuses options dans ce domaine, du classique Make à des outils plus complexes comme Autotools, mais CMake reste un choix populaire.
+
+Dans ce document, nous utiliserons sous Windows :  
+- VS Code comme environnement de développement  
+- CMake comme système de construction  
+- gcc comme compilateur C/C++  
+- et git comme système de gestion de versions.
+
 ## 1. Installer Visual Studio Code
 
 1. Rendez-vous sur la page officielle de téléchargement :  
