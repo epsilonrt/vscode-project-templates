@@ -1,18 +1,17 @@
 cmake_minimum_required(VERSION 3.15)
 
 # Project Name and language
-project(#{PROJECT_NAME} C)
+project(#{PROJECT_NAME} CXX)
 
-set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Uncomment the following lines if you want to use libraries, eg libmosbuspp
 # find_package(PkgConfig REQUIRED) 
 # pkg_check_modules(LIBMOSBUSPP REQUIRED IMPORTED_TARGET libmosbuspp)
 
-
-file(GLOB SOURCES src/*.c)
+file(GLOB SOURCES src/*.cpp)
 add_executable(${PROJECT_NAME} ${SOURCES})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
