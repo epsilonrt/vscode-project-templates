@@ -1,0 +1,84 @@
+diff -ruN '--exclude=.git' orig/espressif32/boards/makergo_c6_supermini.json platforms/espressif32/boards/makergo_c6_supermini.json
+--- orig/espressif32/boards/makergo_c6_supermini.json	1970-01-01 01:00:00.000000000 +0100
++++ platforms/espressif32/boards/makergo_c6_supermini.json	2025-12-06 20:16:56.556378100 +0100
+@@ -0,0 +1,38 @@
++{
++  "build": {
++    "core": "esp32",
++    "extra_flags": [
++      "-DMAKERGO_C6_SUPERMINI",
++      "-DARDUINO_USB_MODE=1",
++      "-DARDUINO_USB_CDC_ON_BOOT=1"
++    ],
++    "f_cpu": "160000000L",
++    "f_flash": "80000000L",
++    "flash_mode": "qio",
++    "mcu": "esp32c6",
++    "variant": "makergo_c6_supermini"
++  },
++  "connectivity": [
++    "wifi",
++    "bluetooth",
++    "zigbee",
++    "thread"
++  ],
++  "debug": {
++    "openocd_target": "esp32c6.cfg"
++  },
++  "frameworks": [
++    "arduino",
++    "espidf"
++  ],
++  "name": "MakerGO ESP32 C6 SuperMini",
++  "upload": {
++    "flash_size": "4MB",
++    "maximum_ram_size": 327680,
++    "maximum_size": 4194304,
++    "require_upload_port": true,
++    "speed": 460800
++  },
++  "url": "https://circuitpython.org/board/makergo_esp32c6_supermini",
++  "vendor": "MakerGO"
++}
+diff -ruN '--exclude=.git' orig/espressif32/boards/waveshare_esp32_c6_zero.json platforms/espressif32/boards/waveshare_esp32_c6_zero.json
+--- orig/espressif32/boards/waveshare_esp32_c6_zero.json	1970-01-01 01:00:00.000000000 +0100
++++ platforms/espressif32/boards/waveshare_esp32_c6_zero.json	2025-12-06 20:16:56.559877200 +0100
+@@ -0,0 +1,38 @@
++{
++  "build": {
++    "core": "esp32",
++    "extra_flags": [
++      "-DWAVESHARE_ESP32_C6_ZERO",
++      "-DARDUINO_USB_MODE=1",
++      "-DARDUINO_USB_CDC_ON_BOOT=1"
++    ],
++    "f_cpu": "160000000L",
++    "f_flash": "80000000L",
++    "flash_mode": "qio",
++    "mcu": "esp32c6",
++    "variant": "waveshare_esp32_c6_zero"
++  },
++  "connectivity": [
++    "wifi",
++    "bluetooth",
++    "zigbee",
++    "thread"
++  ],
++  "debug": {
++    "openocd_target": "esp32c6.cfg"
++  },
++  "frameworks": [
++    "arduino",
++    "espidf"
++  ],
++  "name": "Waveshare ESP32-C6 Zero",
++  "upload": {
++    "flash_size": "4MB",
++    "maximum_ram_size": 327680,
++    "maximum_size": 4194304,
++    "require_upload_port": true,
++    "speed": 460800
++  },
++  "url": "https://www.waveshare.com/wiki/ESP32-C6-Zero",
++  "vendor": "Waveshare"
++}

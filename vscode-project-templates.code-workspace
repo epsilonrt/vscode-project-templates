@@ -1,0 +1,14 @@
+{
+	"folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "Platformio/esp32c6/Blink"
+    },
+    {
+      "path": "Platformio/esp32c6/ZigbeeOnOffLight"
+    }
+  ],
+  "settings": {}
+}
